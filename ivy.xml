@@ -1,0 +1,6 @@
+<ivy-module version="2.0">
+    <info organisation="codewarts" module="summon-your-build-tool"/>
+    <dependencies>
+        <dependency org="com.github.lalyos" name="jfiglet" rev="0.0.9"/>
+    </dependencies>
+</ivy-module>

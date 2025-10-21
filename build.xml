@@ -1,0 +1,45 @@
+<project name="SummonYourBuildTool" default="build" basedir="." xmlns:ivy="antlib:org.apache.ivy.ant">
+
+    <property name="src.dir" value="src/main/java"/>
+    <property name="build.dir" value="build"/>
+    <property name="lib.dir" value="lib"/>
+    <property name="main.class" value="codewarts.MadHatter"/>
+
+    <taskdef name="ivy-configure" classname="org.apache.ivy.ant.IvyConfigure"/>
+    <taskdef name="ivy-resolve" classname="org.apache.ivy.ant.IvyResolve"/>
+    <taskdef name="ivy-retrieve" classname="org.apache.ivy.ant.IvyRetrieve"/>
+
+    <target name="resolve">
+        <mkdir dir="${lib.dir}"/>
+        <ivy-configure/>
+        <ivy-resolve/>
+        <ivy-retrieve pattern="${lib.dir}/[artifact]-[revision](-[classifier]).[ext]"/>
+    </target>
+
+    <target name="build" depends="resolve, clean">
+        <mkdir dir="${build.dir}"/>
+        <javac srcdir="${src.dir}" destdir="${build.dir}" includeantruntime="false">
+            <classpath>
+                <fileset dir="${lib.dir}">
+                    <include name="**/*.jar"/>
+                </fileset>
+            </classpath>
+        </javac>
+    </target>
+
+    <target name="run" depends="build">
+        <java classname="${main.class}" fork="true">
+            <classpath>
+                <fileset dir="${lib.dir}">
+                    <include name="**/*.jar"/>
+                </fileset>
+                <pathelement path="${build.dir}"/>
+            </classpath>
+        </java>
+    </target>
+
+    <target name="clean">
+        <delete dir="${build.dir}" />
+    </target>
+
+</project>
