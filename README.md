@@ -1,6 +1,6 @@
 # Summon your build tool
 
-## Intro
+## Introduction
 
 Many new Java developers feel like first-years at Codewarts, nervously waiting for the Sorting Hat
 to decide their fate - the choice is between Maven or Gradle (or Ant :-P). In this hands-on tech
@@ -10,21 +10,25 @@ project.
 
 ## The Fellowship of the Build
 
-Before we dive too deep into our magical world of Java builds, let's hear from a brave traveler
-who's journeyed here from another realm - the land of .NET. Like a hobbit stepping into Codewarts,
-he's faced strange incantations and ancient POM scrolls. Please welcome our guest as he shares his
-quest through The Fellowship of the Build.
+Before we dive into our magical world of Java builds, let's hear from a brave traveler who's
+journeyed here from another realm - the land of .NET. Like a hobbit stepping into Codewarts, he's
+faced strange incantations and ancient POM scrolls. Please welcome our guest as he shares his
+quest through [The Fellowship of the Build](docs/the-fellowship-of-the-build.md).
 
 ## Ready?
 
-You are ready if you have Git for Windows (Git Bash) and a JDK installed. Or are otherwise running
-on Linux or a Mac. We'll show you how to install the build tools. Ensure the `JAVA_HOME`
-environment variable is set to your JDK folder.
+You are ready if you have [Git](https://git-scm.com/) for Windows (Git Bash) and a
+[JDK](https://jdk.java.net/) installed. Or are otherwise running on Linux or a Mac (in other words
+are using [Bash](https://www.gnu.org/software/bash/bash.html)). We'll show you how to install the
+build tools. Ensure the `JAVA_HOME` environment variable is set to your JDK folder.
 
-## Peeking under the Hat
+## A Peek under the Hat
 
-Let's take a quick peek under the Sorting Hat - our demo program that will guide us through the
-journey ahead.
+Let's take a quick peek under the Sorting Hat:
+
+- [SortingHat.java](src/main/java/codewarts/SortingHat.java)
+- [SortingHatTest.java](src/test/java/codewarts/SortingHatTest.java)
+- [MadHatter.java](src/main/java/codewarts/MadHatter.java)
 
 ## Backstory
 
@@ -85,9 +89,9 @@ relies on rules with targets, dependencies and commands, and uses timestamps to 
 needs rebuilding.
 
 - Installation
-  - If you are on Windows and don't have Make installed, go to
-    [ezwinports](https://sourceforge.net/projects/ezwinports/files/)
-    - download `make-4.4.1-without-guile-w32-bin.zip`
+  - If you are on Windows go to
+    [ezwinports](https://sourceforge.net/projects/ezwinports/files/),
+    - download `make-4.4.1-without-guile-w32-bin.zip`,
     - extract and copy `make.exe` to the project root.
 
 ```plaintext
@@ -103,9 +107,9 @@ project-root/
 make [target]
 ```
 
+* Clean: `./make clean`
 * Build: `./make`
 * Run: `./make run`
-* Clean: `./make clean`
 
 ## Antforge
 
@@ -145,9 +149,9 @@ project-root/
 ant [target]
 ```
 
-* Build: `ant`
-* Run: `ant run`
 * Clean: `ant clean`
+* Build: `ant build`
+* Run: `ant run`
 
 ## Mavenmere
 
@@ -189,15 +193,66 @@ project-root/
 mvn [<goal(s)>] [<phase(s)>]
 ```
 
+* Clean: `mvn clean`
 * Build: `mvn compile`
 * Test: `mvn test`
 * Run: `mvn exec:java`
-* Clean: `mvn clean`
 
-Hexes and Hiccups
-Charms and Cheats
+### Hexes and Hiccups
+
+- Dependency management: conflicts, scope confusion, snapshot vs. release confusion
+- Slow builds
+- Complex plugin configurations
+- Project structure & POM complexity
+  - Large, multi-module projects can have complicated hierarchies which become hard to maintain.
+  - Misuse of parent POMs can cause confusing dependency or plugin management issues.
+- Unclear error messages
+
+### Charms and Cheats
+
+- Dependency management: use `dependency:tree` and `dependency:analyze` goals.
+- Slow builds
+  - Use offline mode (-o) when you don't need to download new dependencies.
+  - Use parallel builds (-T) for multi-module projects.
+- Plugins
+  - Read plugin documentation carefully.
+  - Use plugin versions explicitly to avoid unexpected behavior from upgrades.
+- Multi-module projects
+  - Keep POMs clean, minimize inheritance.
+  - Clearly define modules and use `dependencyManagement` for consistent versions.
+  - Use `mvn help:effective-pom` to show the resolved POM after inheritance.
+- Debugging
+  - Use -X for debug logging to get more detailed error info.
+  - Regularly run `mvn clean` to avoid stale artifacts causing weird issues.
+
+### Spellbinding Scenarios
+
+Maven shines in environments where standardization, repeatability and dependency management are
+key: enterprise Java projects, multi-module (monorepo) projects, open source libraries and
+frameworks, CI/CD pipelines and automated builds, dependency-heavy projects and legacy Java
+projects.
+
+Maven is not the best choice for: custom build logic or scripting, rapid prototyping with minimal
+setup and projects that need incremental builds & caching optimization.
 
 ## Conjuring with Maven
+
+1. Generate a new Maven project using archetype plugin:
+
+```
+mvn archetype:generate -DgroupId=com.example.magic \
+    -DartifactId=spell-demo \
+    -DarchetypeArtifactId=maven-archetype-quickstart \
+    -DarchetypeVersion=1.4 \
+    -DinteractiveMode=false
+```
+
+2. Build it:
+
+```
+cd spell-demo
+mvn clean package
+```
 
 ## Gradlewraith
 
@@ -230,6 +285,10 @@ java -cp <class path> <application>
 ```
 
 gradle build
+
+### Hexes and Hiccups
+### Charms and Cheats
+### Spellbinding Scenarios
 
 ## Crafting with Gradle
 
