@@ -21,6 +21,11 @@ You are ready if you have Git for Windows (Git Bash) and a JDK installed. Or are
 on Linux or a Mac. We'll show you how to install the build tools. Ensure the `JAVA_HOME`
 environment variable is set to your JDK folder.
 
+## Peeking under the Hat
+
+Let's take a quick peek under the Sorting Hat - our demo program that will guide us through the
+journey ahead.
+
 ## Backstory
 
 - 1990s
