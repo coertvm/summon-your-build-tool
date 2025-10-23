@@ -293,7 +293,7 @@ gradle <task>
 ```
 
 * Clean: `gradle clean`
-* Build: `gradle build`
+* Build: `gradle compileJava`
 * Test: `gradle test`
 * Run: `gradle run`
 

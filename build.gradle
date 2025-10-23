@@ -11,8 +11,8 @@ repositories {
 
 dependencies {
     implementation 'com.github.lalyos:jfiglet:0.0.9'
-    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
     testImplementation 'org.junit.jupiter:junit-jupiter:6.0.0'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
 
 application {
