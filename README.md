@@ -93,6 +93,7 @@ needs rebuilding.
     [ezwinports](https://sourceforge.net/projects/ezwinports/files/),
     - download `make-4.4.1-without-guile-w32-bin.zip`,
     - extract and copy `make.exe` to the project root.
+  - Verify: `./make --version`
 
 ```plaintext
 project-root/
@@ -133,6 +134,7 @@ setup compared to newer tools.
   - Go to [Apache Ivy](https://ant.apache.org/ivy/), download, extract, locate the JAR file and
     copy it into your Ant installation:
     - `cp ivy-<version>.jar $ANT_HOME/lib/`
+  - Verify: `ant -version`
 
 ```plaintext
 project-root/
@@ -173,6 +175,7 @@ repository on your machine, so they can be reused across multiple projects.
 - Installation
   - Go to [Apache Maven](https://maven.apache.org/), download and extract the downloaded file.
   - Add the `bin` folder of the extracted Maven installation to the `PATH` environment variable.
+  - Verify: `mvn -version`
 
 ```plaintext
 project-root/
@@ -270,8 +273,9 @@ Gradle is highly customizable and supports both convention and configuration, ma
 complex and scalable projects.
 
 - Installation
-  - Go to [Apache Maven](https://maven.apache.org/), download and extract the downloaded file.
-  - Add the `bin` folder of the extracted Maven installation to the `PATH` environment variable.
+  - Go to [Gradle](https://gradle.org/), download and extract the downloaded file.
+  - Add the `bin` folder of the extracted Gradle installation to the `PATH` environment variable.
+  - Verify: `gradle -v`.
 
 ```plaintext
 project-root/
