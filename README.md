@@ -263,7 +263,15 @@ mvn clean package
 Gradlewraiths combine the best of magic and scripting. They weave Groovy and Kotlin spells to
 automate everything and summon productivity from thin air.
 
-Gradle is a modern build automation tool for Java and other languages that uses a declarative DSL (Groovy or Kotlin) to define builds. It combines the flexibility of Ant with Maven’s dependency management, and follows a task-based model with a focus on incremental builds and performance. Gradle is highly customizable and supports both convention and configuration, making it popular for complex and scalable projects.
+Gradle is a modern build automation tool for Java and other languages that uses a declarative DSL
+(Groovy or Kotlin) to define builds. It combines the flexibility of Ant with Maven's dependency
+management and follows a task-based model with a focus on incremental builds and performance.
+Gradle is highly customizable and supports both convention and configuration, making it popular for
+complex and scalable projects.
+
+- Installation
+  - Go to [Apache Maven](https://maven.apache.org/), download and extract the downloaded file.
+  - Add the `bin` folder of the extracted Maven installation to the `PATH` environment variable.
 
 ```plaintext
 project-root/
@@ -279,6 +287,8 @@ project-root/
 └── settings.gradle
 ```
 
+- Edit [`pom.xml`](pom.xml).
+
 ```
 javac -d <build directory> <source files>
 java -cp <class path> <application>
@@ -291,6 +301,8 @@ gradle build
 ### Spellbinding Scenarios
 
 ## Crafting with Gradle
+
+## Spells Yet to Master
 
 ## There and Back Again
 
