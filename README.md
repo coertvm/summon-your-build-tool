@@ -280,10 +280,11 @@ complex and scalable projects.
 ```plaintext
 project-root/
 ├── build/
-├── src/                # Follows Maven conventions
-├── build.gradle        # Main build script (Groovy or Kotlin DSL)
-├── settings.gradle     # (Optional) Defines project name and subprojects
-└── gradle.properties   # (Optional) Project-wide settings or environment configs
+├── gradle/libs.versions.toml     # (Optional) Declare dependency & plugin versions centrally
+├── src/                          # Follows Maven conventions
+├── build.gradle                  # Main build script (Groovy or Kotlin DSL)
+├── settings.gradle               # (Optional) Defines project name and subprojects
+└── gradle.properties             # (Optional) Project-wide settings or environment configs
 ```
 
 - Edit [`build.gradle`](build.gradle).
@@ -293,19 +294,48 @@ gradle <task>
 ```
 
 * Clean: `gradle clean`
-* Build: `gradle compileJava`
+* Build: `gradle compileJava` or `gradle build`
 * Test: `gradle test`
 * Run: `gradle run`
 
-gradle build
-
 ### Hexes and Hiccups
+
+- ?
+
 ### Charms and Cheats
+
+- ?
+
 ### Spellbinding Scenarios
+
+- ?
 
 ## Crafting with Gradle
 
+1. Generate a new Gradle project:
+
+```
+cd ~
+mkdir spell-demo
+cd spell-demo
+gradle init --dsl groovy \
+    --type java-application \
+    --package com.example.magic \
+    --project-name spell-demo \
+    --test-framework junit-jupiter \
+    --no-split-project \
+    --use-defaults
+```
+
+2. Build it:
+
+```
+gradle build
+```
+
 ## Spells Yet to Master
+
+?
 
 ## There and Back Again
 
