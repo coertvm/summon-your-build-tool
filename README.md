@@ -12,7 +12,7 @@ project.
 
 Before we dive into our magical world of Java builds, let's hear from a brave traveler who's
 journeyed here from another realm - the land of .NET. Like a hobbit stepping into Codewarts, he's
-faced strange incantations and ancient POM scrolls. Please welcome our guest as he shares his
+faced strange incantations and ancient POM scrolls. Please welcome **Shaun Linde** as he shares his
 quest through [The Fellowship of the Build](docs/the-fellowship-of-the-build.md).
 
 ## Ready?
