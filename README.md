@@ -240,17 +240,17 @@ setup and projects that need incremental builds & caching optimization.
 1. Generate a new Maven project using archetype plugin:
 
 ```
+cd ~
 mvn archetype:generate -DgroupId=com.example.magic \
     -DartifactId=spell-demo \
     -DarchetypeArtifactId=maven-archetype-quickstart \
-    -DarchetypeVersion=1.4 \
     -DinteractiveMode=false
 ```
 
 2. Build it:
 
 ```
-cd spell-demo
+cd spell-demo/
 mvn clean package
 ```
 
