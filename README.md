@@ -280,11 +280,11 @@ complex and scalable projects.
 ```plaintext
 project-root/
 ├── build/
-├── gradle/libs.versions.toml     # (Optional) Declare dependency & plugin versions centrally
-├── src/                          # Follows Maven conventions
-├── build.gradle                  # Main build script (Groovy or Kotlin DSL)
-├── settings.gradle               # (Optional) Defines project name and subprojects
-└── gradle.properties             # (Optional) Project-wide settings or environment configs
+├── gradle/libs.versions.toml  # (Optional) Version catalog
+├── src/                       # Follows Maven conventions
+├── build.gradle               # Main build script (Groovy or Kotlin DSL)
+├── settings.gradle            # (Optional) Defines project name and subprojects
+└── gradle.properties          # (Optional) Project settings or environment configs
 ```
 
 - Edit [`build.gradle`](build.gradle).
@@ -300,15 +300,32 @@ gradle <task>
 
 ### Hexes and Hiccups
 
-- ?
+- Slow build times: not leveraging the Gradle Daemon or build cache.
+- Dependency conflicts: between different versions of libraries.
+- Complex build scripts
+- Plugins not compatible with Gradle version.
+- Debugging:
+  - Cryptic error messages
+  - Difficult to trace task or configuration that caused failure.
 
 ### Charms and Cheats
 
-- ?
+- Use the Gradle Daemon.
+- Enable build cache.
+- Leverage incremental builds.
+- Use the Kotlin DSL for better IDE support and type safety.
+- Run with `--scan` for build scan.
+- Use `gradle dependencies` and `gradle dependencyInsight`.
 
 ### Spellbinding Scenarios
 
-- ?
+Gradle is at its best in complex, modular and performance-sensitive builds - especially when you
+need flexibility or extensibility: large multi-module projects, Android development, polyglot /
+multi-language builds, continuous integration and build automation and highly custom or
+domain-specific build logic.
+
+Gradle performs poorly or isn't ideal for: simple projects, projects requiring deterministic or
+"locked down" builds and teams without build engineering expertise.
 
 ## Crafting with Gradle
 
@@ -335,17 +352,19 @@ gradle build
 
 ## Spells Yet to Master
 
-?
+Even the most skilled wizards have charms left to learn. Beyond building, packaging and testing,
+there are deeper enchantments in the world of build tools: continuous integration and automation,
+plugins, multi-module projects, configuration and customization, performance, deployment and
+distribution, IDE integration, and security.
 
 ## There and Back Again
 
-Our adventurer has survived the journey - from the dark forests of Maven to the towers of Gradle -
-and lived to tell the tale. Now, as every good story deserves, we turn to the reflections of one
-who's been there and back again. Let's hear his hard-won lessons and insights from his epic
-cross-realm adventure.
+Our adventurer survived the journey - from the forests of Maven to the towers of Gradle - and lived
+to tell the tale. We turn to the reflections of one who's been
+[There and Back Again](docs/there-and-back-again.md) to hear his hard-won lessons and insights.
 
 ## The Council of Wizards
 
 As our journey through the magical realms of Java build tools comes to a close, it's time to gather
-as a council of wizards-sharing wisdom, answering questions and conjuring clarity. Step forward and
-let your curiosities be heard!
+as a council of wizards - sharing wisdom, answering questions and conjuring clarity. Step forward
+and let your curiosities be heard!
