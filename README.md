@@ -279,24 +279,23 @@ complex and scalable projects.
 
 ```plaintext
 project-root/
-├── src/
-│   ├── main/
-│   │   ├── java/
-│   │   │   └── com/example/App.java
-│   │   └── resources/
-│   └── test/
-│       └── java/
-│           └── com/example/AppTest.java
-├── build.gradle
-└── settings.gradle
+├── build/
+├── src/                # Follows Maven conventions
+├── build.gradle        # Main build script (Groovy or Kotlin DSL)
+├── settings.gradle     # (Optional) Defines project name and subprojects
+└── gradle.properties   # (Optional) Project-wide settings or environment configs
 ```
 
-- Edit [`pom.xml`](pom.xml).
+- Edit [`build.gradle`](build.gradle).
 
 ```
-javac -d <build directory> <source files>
-java -cp <class path> <application>
+gradle <task>
 ```
+
+* Clean: `gradle clean`
+* Build: `gradle build`
+* Test: `gradle test`
+* Run: `gradle run`
 
 gradle build
 

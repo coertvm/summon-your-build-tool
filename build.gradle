@@ -1,8 +1,8 @@
 plugins {
-    id 'java'
+    id 'application'
 }
 
-group = 'com.example'
+group = 'codewarts'
 version = '1.0'
 
 repositories {
@@ -10,5 +10,14 @@ repositories {
 }
 
 dependencies {
-    testImplementation 'junit:junit:4.13.2'
+    implementation 'com.github.lalyos:jfiglet:0.0.9'
+    testImplementation 'org.junit.jupiter:junit-jupiter:6.0.0'
+}
+
+application {
+    mainClass = 'codewarts.MadHatter'
+}
+
+tasks.test {
+    useJUnitPlatform()
 }
