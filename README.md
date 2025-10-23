@@ -8,9 +8,12 @@ talk, we'll guide you through the "sorting ceremony" of Java build tools, helpin
 their strengths, quirks and ideal use cases so you can confidently wear the hat that fits your
 project.
 
-## The Muggle's Dilemma
+## The Fellowship of the Build
 
-?
+Before we dive too deep into our magical world of Java builds, let's hear from a brave traveler
+who's journeyed here from another realm - the land of .NET. Like a hobbit stepping into Codewarts,
+he's faced strange incantations and ancient POM scrolls. Please welcome our guest as he shares his
+quest through The Fellowship of the Build.
 
 ## Ready?
 
@@ -186,6 +189,11 @@ mvn [<goal(s)>] [<phase(s)>]
 * Run: `mvn exec:java`
 * Clean: `mvn clean`
 
+Hexes and Hiccups
+Charms and Cheats
+
+## Conjuring with Maven
+
 ## Gradlewraith
 
 **Tool**: Gradle\
@@ -217,3 +225,12 @@ java -cp <class path> <application>
 ```
 
 gradle build
+
+## Crafting with Gradle
+
+## There and Back Again
+
+Our adventurer has survived the journey - from the dark forests of Maven to the towers of Gradle -
+and lived to tell the tale. Now, as every good story deserves, we turn to the reflections of one
+who's been there and back again. Let's hear his hard-won lessons and insights from his epic
+cross-realm adventure.
