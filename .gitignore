@@ -4,4 +4,3 @@ lib/
 target/
 *.class
 *.jar
-make.exe
