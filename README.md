@@ -213,7 +213,7 @@ mvn [<goal(s)>] [<phase(s)>]
 
 ### Charms and Cheats
 
-- Dependency management: use `dependency:tree` and `dependency:analyze` goals.
+- Dependency management: use `mvn dependency:tree` and `mvn dependency:analyze` goals.
 - Slow builds
   - Use offline mode (-o) when you don't need to download new dependencies.
   - Use parallel builds (-T) for multi-module projects.
