@@ -222,7 +222,7 @@ mvn [<goal(s)>] [<phase(s)>]
   - Use plugin versions explicitly to avoid unexpected behavior from upgrades.
 - Multi-module projects
   - Keep POMs clean, minimize inheritance.
-  - Clearly define modules and use `dependencyManagement` for consistent versions.
+  - Clearly define modules and use `<dependencyManagement>` for consistent versions.
   - Use `mvn help:effective-pom` to show the resolved POM after inheritance.
 - Debugging
   - Use -X for debug logging to get more detailed error info.
