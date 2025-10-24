@@ -300,20 +300,20 @@ gradle <task>
 
 ### Hexes and Hiccups
 
+- Steep learning curve.
 - Slow build times: not leveraging the Gradle Daemon or build cache.
 - Dependency conflicts: between different versions of libraries.
-- Complex build scripts
+- Complex build scripts.
 - Plugins not compatible with Gradle version.
 - Debugging:
-  - Cryptic error messages
+  - Cryptic error messages.
   - Difficult to trace task or configuration that caused failure.
 
 ### Charms and Cheats
 
-- Use the Gradle Daemon.
-- Enable build cache.
+- Learn the Gradle DSLs and API. Use the Kotlin DSL for better IDE support and type safety.
+- Use the Gradle Daemon and enable the build cache.
 - Leverage incremental builds.
-- Use the Kotlin DSL for better IDE support and type safety.
 - Run with `--scan` for build scan.
 - Use `gradle dependencies` and `gradle dependencyInsight`.
 
